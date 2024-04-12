@@ -77,7 +77,6 @@ class BezoekerController extends AbstractController
         if ($form->isSubmitted())
         {
             $product=$form->getData();
-            //dd($product);
             $entityManager->persist($product);
             $entityManager->flush();
             $name=$product->getName();
